@@ -1,68 +1,39 @@
-/* Base Reset */
-* {
+body {
   margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  scroll-behavior: smooth;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #121212;
+  color: #f5f5f5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
 }
 
-body {
-  font-family: 'Segoe UI', sans-serif;
-  background: linear-gradient(to bottom right, #0f2027, #203a43, #2c5364);
-  color: #fff;
+.container {
   padding: 20px;
 }
 
-/* Header */
-header {
-  text-align: center;
-  margin-bottom: 40px;
+.card {
+  background-color: #1e1e1e;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.4);
+  max-width: 500px;
+  width: 100%;
 }
 
 .typewriter {
-  overflow: hidden;
-  border-right: 2px solid white;
+  font-size: 28px;
+  font-weight: bold;
+  border-right: 2px solid #0ff;
   white-space: nowrap;
-  animation: typing 4s steps(30, end), blink 0.8s infinite;
-  font-size: 2em;
-  max-width: 100%;
-  margin-bottom: 10px;
+  overflow: hidden;
+  width: 0;
+  animation: typing 3s steps(30, end) forwards, blink 0.75s step-end infinite;
+  color: #00ffff;
+  margin-bottom: 20px;
 }
 
-#clock-date {
-  font-size: 1rem;
-  margin-top: 5px;
-}
-
-/* Cards */
-.card {
-  background: rgba(255, 255, 255, 0.05);
-  padding: 20px;
-  margin: 20px auto;
-  border-radius: 12px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-  max-width: 500px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 20px rgba(255, 255, 255, 0.2);
-}
-
-h2 {
-  color: #00ffc8;
-  margin-bottom: 10px;
-}
-
-footer {
-  text-align: center;
-  margin-top: 40px;
-  font-size: 0.9rem;
-  opacity: 0.7;
-}
-
-/* Animations */
 @keyframes typing {
   from { width: 0 }
   to { width: 100% }
@@ -70,21 +41,31 @@ footer {
 
 @keyframes blink {
   0%, 100% { border-color: transparent }
-  50% { border-color: white }
+  50% { border-color: #0ff }
 }
 
-/* Responsive */
-@media (max-width: 600px) {
-  .card {
-    margin: 10px;
-    padding: 15px;
-  }
+.info-field {
+  padding: 10px 15px;
+  border-radius: 6px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+  background-color: #1c1c1c;
+}
 
-  .typewriter {
-    font-size: 1.5em;
-  }
+.info-field + .info-field {
+  margin-top: 10px;
+}
 
-  #clock-date {
-    font-size: 0.9rem;
-  }
-  }
+.info-field:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 12px rgba(0, 255, 255, 0.3);
+  background-color: rgba(0, 255, 255, 0.1);
+}
+
+a {
+  color: #00ffff;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
