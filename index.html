@@ -3,35 +3,41 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Digital ID - S. Sourav</title>
+  <title>Digital Student ID</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <header>
-    <h1 class="typewriter">Hi, I am S. Sourav</h1>
-    <div id="clock-date"></div>
-  </header>
+  <div class="container">
+    <div class="card">
+      <h1 class="typewriter">Digital Student ID</h1>
+      <div class="info">
+        <p class="info-field"><strong>Name:</strong> Sourov Biswas</p>
+        <p class="info-field"><strong>Student ID:</strong> 003094</p>
+        <p class="info-field"><strong>Class:</strong> 12</p>
+        <p class="info-field"><strong>Department:</strong> Science</p>
+        <p class="info-field"><strong>Session:</strong> 2024-2025</p>
+        <p class="info-field"><strong>HS Exam:</strong> 2026</p>
+        <p class="info-field"><strong>College Name:</strong> Sachindra Degree College</p>
+        <p class="info-field"><strong>Phone Number:</strong> +8801823403211</p>
+        <p class="info-field"><strong>Email Address:</strong> someone@email.com</p>
+        <p class="info-field"><strong>Emergency Contact:</strong> +8801779296538</p>
+        <p class="info-field"><strong>Blood Group:</strong> A+</p>
+        <p class="info-field"><strong>College Website:</strong> 
+          <a href="https://shachindracollege.edu.bd/" target="_blank">Visit</a>
+        </p>
+        <p class="info-field"><strong>Current Time:</strong> <span id="clock"></span></p>
+      </div>
+    </div>
+  </div>
 
-  <main>
-    <section class="card">
-      <h2>Digital ID</h2>
-      <p><strong>Name:</strong> S. Sourav</p>
-      <p><strong>Student:</strong> Science, Class 12, Section A</p>
-      <p><strong>Goal:</strong> Build a global IT company</p>
-    </section>
-    <section class="card">
-      <h2>Personal Info</h2>
-      <p><strong>Nickname:</strong> BOSS</p>
-      <p><strong>Birthday:</strong> July 29</p>
-      <p><strong>Blood Group:</strong> A+</p>
-      <p><strong>Mother's Birthday:</strong> June 21</p>
-    </section>
-  </main>
-
-  <footer>
-    <p>&copy; 2025 | BOSS's Digital ID</p>
-  </footer>
-
-  <script src="script.js"></script>
+  <script>
+    function updateClock() {
+      const now = new Date();
+      const clock = document.getElementById('clock');
+      clock.textContent = now.toLocaleTimeString();
+    }
+    setInterval(updateClock, 1000);
+    updateClock();
+  </script>
 </body>
 </html>
